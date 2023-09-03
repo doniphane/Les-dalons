@@ -1,0 +1,104 @@
+:root {
+    --main-bg-color: pink;
+    --femelle: url("./img/kTKo7a6zc.png");
+    --male: url("./img/png-transparent-gender-symbol-male-planet-symbols-computer-icons-symbol-miscellaneous-sign-gender-symbol.png");
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: linear-gradient(225deg, #EFFC98 0%, #D9FCA4 51.03%, #ACFCBD 100%);
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .img-contain {
+    flex-shrink: 0;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .img-contain img {
+    width: auto;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.366);
+  }
+  
+  .info {
+    padding: 16px;
+  }
+  
+  p {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    margin: 12px 0;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .card.femelle::before {
+    background-image: var(--femelle);
+  }
+  
+  .card.male::before {
+    background-image: var(--male);
+  }
+  
